@@ -30,7 +30,8 @@ a, a:visited, a:hover{
 }
 
 .keys {
-  color: #a9a9a9;
+  /* color: #a9a9a9; */
+  color: #707070;
   margin-right: 10px;
 }
 
@@ -215,19 +216,23 @@ h1 {
 /***************************/
 
 ::-webkit-input-placeholder {
-   color: #a9a9a9;/*#fff;*/
+   /* color: #a9a9a9;#fff;*/
+   color: #707070;
 }
 
 :-moz-placeholder { /* Firefox 18- */
+   color: #707070;
    color: #a9a9a9;/*#fff;*/ 
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
+   color: #707070;
    color: #a9a9a9;/*#fff;*/  
 }
 
 :-ms-input-placeholder {  
-   color: #a9a9a9;/*#fff;*/  
+   /* color: #a9a9a9;#fff;*/
+   color: #707070;
 }
 
 input:focus,
@@ -313,6 +318,7 @@ input:focus {
   margin: 0;
   bottom: 0;
   width: 100%;
+  color: #626A71;
   background-color: #e9e9e9;
   font-size: 0.8em;
   padding-top: 5px;
@@ -320,7 +326,8 @@ input:focus {
 }
 
 .text-muted {
-  color: #818a91!important;
+  color: #626A71;
+  /* color: #818a91!important; */
 }
 
 .no-space {
@@ -444,4 +451,8 @@ input:focus {
 .projectCard {
     width: 100%;
     padding: 0;
+}
+
+.footer a {
+  color: #D1004D;
 }
