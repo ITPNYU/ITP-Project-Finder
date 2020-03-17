@@ -263,7 +263,8 @@ function showProject(projectsList) {
           projectsList[j].main_img !== undefined
         ) {
           var img = document.createElement("IMG");
-          img.alt = projectsList[j].name
+          img.alt = "";
+          // img.alt = projectsList[j].name
           if (
             projectsList[j].main_img.startsWith(
               "https://itp.nyu.edu/projects_documents/"
@@ -530,10 +531,10 @@ function showProjectCard(projectsList) {
               "https://itp.nyu.edu/projects_documents/"
             )
           ) {
-            img.alt="Documentation photo of "+projectList[j].name;
+            // img.alt="Documentation photo of "+projectList[j].name;
+            img.alt="";
             img.src = projectsList[j].main_img;
           } else {
-            img.alt="Documentation photo of "+projectList[j].name;
             img.src =
               "https://itp.nyu.edu/projects_documents/" +
               projectsList[j].main_img;
