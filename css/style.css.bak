@@ -38,10 +38,6 @@ a, a:visited, a:hover{
   color: #ff5e99;
 }
 
-.keys:focus {
-  color: #ff5e99; 
-}
-
 h1 {
   font-weight: 100;
 }
@@ -243,19 +239,6 @@ input:focus {
 }
 
 /* button */
-.projectCard.card.overlay.white:focus{
-  border-color: rgba(255, 94, 153, 0.65);
-  border-width:5px;
-}
-.projectCard button:focus{
-
-  background-color: rgba(255,255,255,0.0);
-  border: 1px solid rgb(210, 210, 200);
-  color: rgba(255, 94, 153, 0.65);/*#ff5e99;*/
-}
-
-
-
 .button-circle.button-giant {
   width: 50px;
 }
@@ -352,7 +335,7 @@ input:focus {
   margin: 15px 0 0;
   width: 224px;
   height: 30px;
-  background-image: url(/img/logo_nyu-tisch_white.svg);
+  background-image: url('https://itp.nyu.edu/ranch/projects/img/logo_nyu-tisch_white.svg');
 }
 
 .region-header {
@@ -439,9 +422,4 @@ input:focus {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: space-around;
   }
-}
-
-.projectCard {
-    width: 100%;
-    padding: 0;
 }
