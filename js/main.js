@@ -626,8 +626,8 @@ function showCurrentProject(projectid) {
 function addProjectUrl(projectid) {
   // console.log('run addsuburl');
     console.log(window.location.hash)
-    var oldUrl=$(this).attr("href");
-    var newUrl = oldUrl + `?projectId=${projectid}`;
+    // var oldUrl=$(this).attr("href");
+    var newUrl =  `project?projectId=${projectid}`;
     window.location.hash=newUrl
     console.log(window.location.hash)
     // thisCard.setAttribute("href", `project?projectId=${obj[i].id}`);
