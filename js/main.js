@@ -117,7 +117,7 @@ function addCard(obj) {
     var htmlToAppend =
       "<div class='card-container col-sm-4 col-md-4 centered'>" +
       //"<a href='?projectId=" + obj[i].id + "'>" +
-      "<button class='projectCard card overlay white' data-toggle='modal' data-target='#exampleModal' >" +
+      "<button class='projectCard card overlay white' data-toggle='modal' data-target='#exampleModal' onclick='addProjectUrl(" + obj[i].id +")'>'" +
       // "<button></button>" +
       "<div class='bg'></div>" +
       "<div class='card-text'>" +
@@ -168,7 +168,6 @@ function addCard(obj) {
     var oldUrl=$(this).attr("href");
     var newUrl = oldUrl + `?projectId=${obj[i].id}`;
     thisCard.setAttribute("href", `project?projectId=${obj[i].id}`);
-    console.log(newUrl)
   }
   positionFooter();
   if (i <= -1 && obj.length > 9) {
@@ -295,8 +294,8 @@ function addSubUrl() {
   // console.log('run addsuburl');
   $(window.location.hash).modal("show");
   $('div[data-toggle="modal"]').click(function() {
-    // console.log(window.location)
     window.location.hash= $(this).attr("href");
+    console.log(window.location.hash)
   });
 
   $('button[data-dismiss="modal"]').click(function() {
@@ -622,4 +621,14 @@ function showCurrentProject(projectid) {
   var des = replaceHtmlDes(project.description);
   des = replaceHtml(des);
   $("#description").html("<b>Description:</b>  <br />" + des);
+}
+
+function addProjectUrl(projectid) {
+  // console.log('run addsuburl');
+    console.log(window.location.hash)
+    var oldUrl=$(this).attr("href");
+    var newUrl = oldUrl + `?projectId=${projectid}`;
+    window.location.hash=newUrl
+    console.log(window.location.hash)
+    // thisCard.setAttribute("href", `project?projectId=${obj[i].id}`);
 }
