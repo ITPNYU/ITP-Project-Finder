@@ -418,24 +418,7 @@ $(document).ready(function() {
     });
 });
 
-// function GetURLParameter(sParam){
-//   var sPageURL = window.location.search.substring(1);
-//   var sURLVariables = sPageURL.split('&');
-//   for (var i = 0; i < sURLVariables.length; i++){
-//     var sParameterName = sURLVariables[i].split('=');
-//     if (sParameterName[0] == sParam){
-//         return sParameterName[1];
-// 	  }
-// 	}
-// }​
-
-// let projectId = GetURLParameter('projectId');
-
-// let pjidentification = new URLSearchParamswindow.location.identification)
-// if (pjidentification.has('identification')){
-//   let param = pjidentification.get('identification');
-//   console.log(param)
-// }
+// Create URL Query 
 
 $(document).ready(function() {
   var results = new RegExp("[?&]" + "projectId" + "=([^&#]*)").exec(
@@ -629,12 +612,10 @@ function showCurrentProject(projectid) {
   $("#description").html("<b>Description:</b>  <br />" + des);
 }
 
+// On click add ProjectId as hash
 function addProjectUrl(projectid) {
-  // console.log('run addsuburl');
     console.log(window.location.hash)
-    // var oldUrl=$(this).attr("href");
     var newUrl =  `project?projectId=${projectid}`;
     window.location.hash=newUrl
     console.log(window.location.hash)
-    // thisCard.setAttribute("href", `project?projectId=${obj[i].id}`);
 }

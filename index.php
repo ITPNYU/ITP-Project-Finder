@@ -25,7 +25,7 @@
       <div class="row global-nav-row">
         <div class="small-13 small-centered columns">
           <a claslass="global-nav__search-trigger"></a>
-          <a class="global-nav__logo" href="https://itp.nyu.edu" title="NYU | Tisch Homepage"></a>
+          <a class="global-nav__logo" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
     <div class="container">
 
       <!-- Modal -->
-      <div class="modal fade bs-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-labelledby="exampleModalLabel">
+      <div class="modal fade bs-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLabel">
         <div class="modal-dialog modal-lg" role="document">
 
           <div class="modal-content">
@@ -67,7 +67,7 @@
               <div>
                 <div id="keywords" class="margin"></div>
                 <div id="projectUrl" class="margin"></div>
-                <div id="videoUrl"  class="margin"></div>
+                <div id="videoUrl"  class="margin" aria-labelledby="videoUrl"></div>
                 <div id="pitch" class="margin"></div>
                 <div id="description" class="margin"></div>
               </div>
@@ -85,19 +85,19 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="centered">ITP Projects Finder</h1>
-          <div class="centered"><input id="theInput" placeholder="Type Keywords / Names" autofocus></div>
-          <button class="button button-royal button-circle button-giant" id="searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <div class="centered"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus></div>
+          <button class="button button-royal button-circle button-giant" id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12">
           <div class="responsive">
-            <a class='keys' id="wearable">Wearable</a>
-            <a class='keys' id="pcomp">Physical Computing</a>
-            <a class='keys' id="computArt">Computational Art</a>
-            <a class='keys' id="storytelling">Storytelling</a>
-            <a class='keys' id="thesis">Thesis</a>
+            <a  class='keys' id="wearable" onclick='getProjectsByKey("wearable"); return false;' href='#' tabindex="0">Wearable</a>
+            <a class='keys' id="pcomp" onclick='getProjectsByKey("pcomp"); return false;' tabindex="0" href="#">Physical Computing</a>
+            <a class='keys' id="computArt"  onclick='getProjectsByKey("compuArt"); return false;' tabindex="0" href="#">Computational Art</a>
+            <a class='keys' id="storytelling" onclick='getProjectsByKey("storytelling"); return false;' tabindex="0" href="#">Storytelling</a>
+            <a class='keys' id="thesis" onclick='getProjectsByKey("thesis"); return false;' tabindex="0" href="#">Thesis</a>
           </div>
           <div id="noResult"></div>
           <div class="se-pre-con">LOADING...</div>
@@ -111,7 +111,7 @@
         <div class="col-md-12">
 
           <div class="centered">
-            <button class="button button-royal button-circle button-giant" id="loadMore"><i class="fa fa-plus"></i></button>
+            <button class="button button-royal button-circle button-giant" id="loadMore" aria-labelledby="loadMoreText"><i class="fa fa-plus"></i></button>
             <p class="gray" id="loadMoreText">LOAD MORE</p>
           </div>
 
@@ -128,7 +128,6 @@
       <div class="centered text-muted">
         <p class="no-space">We welcome your feedback and contributions on <a href="https://github.com/yining1023/itp-project-finder" target="_blank">GitHub</a>.</p>
         <p class="no-space">Update or add your projects into the <a href="https://itp.nyu.edu/projects/" target="_blank">ITP projects database</a></p>
-        <p class="no-space"><a href="https://www.nyu.edu/footer/accessibility.html" target="_blank">Accessibility</a></p>
       </div>
     </footer>
 
