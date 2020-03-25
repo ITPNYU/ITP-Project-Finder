@@ -128,6 +128,7 @@
       <div class="centered text-muted">
         <p class="no-space">We welcome your feedback and contributions on <a href="https://github.com/yining1023/itp-project-finder" target="_blank">GitHub</a>.</p>
         <p class="no-space">Update or add your projects into the <a href="https://itp.nyu.edu/projects/" target="_blank">ITP projects database</a></p>
+        <p class="no-space"><a href="https://www.nyu.edu/footer/accessibility.html" target="_blank">Accessibility</a></p>
       </div>
     </footer>
 
