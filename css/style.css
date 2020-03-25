@@ -359,7 +359,7 @@ input:focus {
   margin: 15px 0 0;
   width: 224px;
   height: 30px;
-  background-image: url(/img/logo_nyu-tisch_white.svg);
+  background-image: url('https://itp.nyu.edu/ranch/projects/img/logo_nyu-tisch_white.svg');
 }
 
 .region-header {
