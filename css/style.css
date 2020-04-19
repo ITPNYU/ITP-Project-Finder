@@ -10,17 +10,13 @@ body {
 }
 
 input{
-  margin-bottom: 1%;
-  padding: 15px;
   padding-left: 0px;
-  width: 97%;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(0,0,0,0.3);
   color: #404d5f;/*#fff;*/
-  border-bottom: 5px solid rgb(231, 231, 235);
-  font-size: 25px;
-  font-weight: 900;
+  border-bottom: 1px solid rgb(231, 231, 235);
+  font-size: 18px;
 }
 
 a, a:visited, a:hover{
@@ -244,7 +240,7 @@ button:focus {
 
 input:focus {
   outline: none !important;
-  border-bottom: 5px solid rgba(255, 94, 153, 0.65);
+  /* border-bottom: 5px solid rgba(255, 94, 153, 0.65); */
 }
 
 /* button */
@@ -274,7 +270,6 @@ input:focus {
 
 .button-royal, .button-royal-flat, .button-royal:focus, .button-royal-flat:focus {
   background-color: rgba(255,255,255,0.0);
-  border: 1px solid rgb(210, 210, 200);
   color: rgba(255, 94, 153, 0.65);/*#ff5e99;*/
 }
 
@@ -284,13 +279,13 @@ input:focus {
   color: white;
 }
 
-#searchBtn {
-  position: absolute;
-  top: 55%;
-  left: 91%;
-  border: none;
-  font-size: 22px;
-}
+/* #searchBtn { */
+/*   position: absolute; */
+/*   top: 55%; */
+/*   left: 91%; */
+/*   border: none; */
+/*   font-size: 22px; */
+/* } */
 
 .gray {
   font-weight: 700;
@@ -356,7 +351,7 @@ input:focus {
 
 .global-nav__logo {
   float: left;
-  margin: 15px 0 0;
+  margin: 15px 5vw 0;
   width: 224px;
   height: 30px;
   background-image: url('https://itp.nyu.edu/ranch/projects/img/logo_nyu-tisch_white.svg');
@@ -455,4 +450,157 @@ input:focus {
 
 .footer a {
   color: #D1004D;
+}
+
+nav {
+  background-color: #57068c;
+  min-height:50px;
+  height:60px;
+}
+
+.navbar{
+  border-radius:unset;
+  margin-bottom:unset;
+}
+
+@media all and (min-width: 769px) {
+  #mobileNav {
+    display: none; 
+  } 
+
+}
+
+@media all and (max-width: 769px) {
+  .navbar { 
+    display:none;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #57068c;
+  position: relative; 
+  min-height:60px
+
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #topLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block; 
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #57068c;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0; 
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  color: #ff5e99; 
+}
+
+/* Style the active link (or home/logo) */
+.ham-active {
+  color: Black; 
+}
+
+#topLinks{
+  margin-top:50px;
+  margin-left: 5vw;
+}
+
+.navbar.navbar-expand-lg.scrolling-navbar a {
+  color: white;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  text-decoration: none;
+  color: #ff5e99!important;
+  background-color: unset;
+}
+
+.navbar-right {
+  float: right !important;
+  margin-right: 5vw;
+}
+
+ /* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-size:18px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+.filter-container {
+  display:flex;
+}
+
+.search {
+  margin-left:auto;
+}
+
+#theInput::placeholder{
+  color:black;
 }

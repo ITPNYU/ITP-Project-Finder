@@ -20,20 +20,30 @@
   </head>
 
   <body>
-    <div class="global-nav">
-      <div class="row global-nav-row">
-        <div class="small-13 small-centered columns">
-          <a claslass="global-nav__search-trigger"></a>
-          <a class="global-nav__logo" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+
+    <!-- Mobile Navigation -->
+
+        <div id="mobileNav">
+        <div class="topnav">
+          <a class="global-nav__logo navbar-brand ham-active" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+          <!-- Navigation links (hidden by default) -->
+          <div id="topLinks">
+          <a href="https://itp.nyu.edu">About ITP</a>
+          <a href="https://itp.nyu.edu/classes">ITP Courses</a>
+          <a href="https://itp.nyu.edu/itp/people">ITP People</a>
+          <a href="https://itp.nyu.edu/ranch/projects">ITP Projects</a>
+          </div>
+          <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+          <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-      </div>
-    </div>
+        </div>
 
-
-    <section class="region-header headroom headroom--top">
-
-      <div class="wrapper responsive">
-        <ul class="main-nav">
+<!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg scrolling-navbar">
+        <a class="global-nav__logo navbar-brand" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+        <ul class="nav navbar-nav navbar-right">
 
           <li class="x-toplevel"><a href="https://itp.nyu.edu">About ITP</a></li>
           <li class="x-toplevel"><a href="https://itp.nyu.edu/classes">ITP Courses</a></li>
@@ -41,8 +51,57 @@
           <li class="x-toplevel"><a href="https://itp.nyu.edu/ranch/projects">ITP Projects</a></li>
 
         </ul>
+    </nav>
+
+    <!-- Filters -->
+    <div class="container">
+      <p>Filter by</p>
+      <div class="filter-container">
+      <div class="custom-select" style="width:200px;">
+      <select>
+        <option value="0">Collection:</option>
+        <option value="1">Audi</option>
+        <option value="2">BMW</option>
+        <option value="3">Citroen</option>
+        <option value="4">Ford</option>
+        <option value="5">Honda</option>
+        <option value="6">Jaguar</option>
+        <option value="7">Land Rover</option>
+        <option value="8">Mercedes</option>
+        <option value="9">Mini</option>
+        <option value="10">Nissan</option>
+        <option value="11">Toyota</option>
+        <option value="12">Volvo</option>
+      </select>
       </div>
-    </section>
+
+      <div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Technology:</option>
+    <option value="1">Audi</option>
+    <option value="2">BMW</option>
+    <option value="3">Citroen</option>
+    <option value="4">Ford</option>
+    <option value="5">Honda</option>
+    <option value="6">Jaguar</option>
+    <option value="7">Land Rover</option>
+    <option value="8">Mercedes</option>
+    <option value="9">Mini</option>
+    <option value="10">Nissan</option>
+    <option value="11">Toyota</option>
+    <option value="12">Volvo</option>
+  </select>
+      </div>
+      
+          <div class="search"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus>
+          <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </div>
+        </div>
+    </div>
+
+
+      </div>
+    </div>
 
     <div class="container">
 
@@ -133,4 +192,6 @@
 
   </body>
   <script src="js/main.js"></script>
+
+
 </html>
