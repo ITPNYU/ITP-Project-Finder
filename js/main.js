@@ -620,6 +620,7 @@ function addProjectUrl(projectid) {
     console.log(window.location.hash)
 }
 
+// MOBILE MENU SCRIPT
 function hamburgerMenu() {
   var x = document.getElementById("topLinks");
   if (x.style.display === "block") {
@@ -629,6 +630,7 @@ function hamburgerMenu() {
   }
 }
 
+// CUSTOM SELECT BOX
 var x, i, j, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
@@ -662,6 +664,9 @@ for (i = 0; i < x.length; i++) {
               y[k].removeAttribute("class");
             }
             this.setAttribute("class", "same-as-selected");
+            
+            // GETS PROJECTS BY KEY
+            getProjectsByKey(h.innerHTML)
             break;
           }
         }

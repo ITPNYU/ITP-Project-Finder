@@ -3,9 +3,9 @@
 /**************/
 
 body {
-	background: #f4f4f4;
-	color: #404d5f;/*#fff*/
-	font-family: 'Muli', sans-serif;
+  background: #f4f4f4;
+  color: #404d5f;/*#fff*/
+  font-family: 'Muli', sans-serif;
   /*min-height: 100%;*/
 }
 
@@ -50,33 +50,33 @@ h1 {
 }
 
 .centered{
-	text-align: center;
+  text-align: center;
 }
 
 .card-container {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .card {
   z-index: 5;
-	padding-top: 25px;
+  padding-top: 25px;
   background: no-repeat center;
   background-size: cover;
-/*  border-left: 1px solid #f5f5f5;
+  /*  border-left: 1px solid #f5f5f5;
   border-top: 1px solid #f4f4f4;
   border-right: 1px solid #fafafb;
   border-bottom: 1px solid #e8e8e8;*/
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-box-shadow: 0 2px 3px rgba(0,0,0,.05);
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.05);
-  box-shadow: 0 2px 3px rgba(0,0,0,.1);
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 260px;
-  cursor: pointer;
-  transition: .3s all ease;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+-moz-box-shadow: 0 2px 3px rgba(0,0,0,.05);
+-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.05);
+box-shadow: 0 2px 3px rgba(0,0,0,.1);
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+height: 260px;
+cursor: pointer;
+transition: .3s all ease;
 }
 
 .card:hover {
@@ -212,23 +212,23 @@ h1 {
 /***************************/
 
 ::-webkit-input-placeholder {
-   /* color: #a9a9a9;#fff;*/
-   color: #707070;
+  /* color: #a9a9a9;#fff;*/
+  color: #707070;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #707070;
-   color: #a9a9a9;/*#fff;*/ 
+  color: #707070;
+  color: #a9a9a9;/*#fff;*/ 
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #707070;
-   color: #a9a9a9;/*#fff;*/  
+  color: #707070;
+  color: #a9a9a9;/*#fff;*/  
 }
 
 :-ms-input-placeholder {  
-   /* color: #a9a9a9;#fff;*/
-   color: #707070;
+  /* color: #a9a9a9;#fff;*/
+  color: #707070;
 }
 
 input:focus,
@@ -444,8 +444,8 @@ input:focus {
 }
 
 .projectCard {
-    width: 100%;
-    padding: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .footer a {
@@ -537,7 +537,7 @@ nav {
   margin-right: 5vw;
 }
 
- /* The container must be positioned relative: */
+/* The container must be positioned relative: */
 .custom-select {
   position: relative;
   font-size:18px;
@@ -573,6 +573,7 @@ nav {
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
+  background-color:#F4F4F4;
 }
 
 /* Style items (options): */
@@ -590,7 +591,7 @@ nav {
 }
 
 .select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1)
+  background-color: rgba(200,200,200)
 }
 
 .filter-container {
@@ -603,4 +604,82 @@ nav {
 
 #theInput::placeholder{
   color:black;
+}
+
+quote {
+  font-size:24px;
+  display: block;
+  width: 75%;
+  padding-top:45px;
+}
+
+/* Collection Cards */
+
+.collection-card {
+  max-height:200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+
+
+/* Centered text */
+.centered-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.collection-title {
+  color:white;
+  font-size:24px;
+  text-align:center;
+}
+
+.top-buffer {
+  margin-top:20px;
+}
+
+a.collection-link:focus > div.collection-card {
+  border:solid;
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 5px;
+}
+
+a.collection-link:focus > div> span.overlay::before{
+  opacity:0.35;
+}
+
+.overlay {
+  position: relative;
+  display: inline-block;
+  background: cyan;
+  display: inline-block;
+}
+
+.overlay > img {
+  vertical-align: middle;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .35;
+  transition: .5s ease;
+}
+
+.overlay:hover::before {
+  opacity: 0;
+}
+
+#theInput:focus {
+  border:solid;
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 1px;
 }
