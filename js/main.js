@@ -212,9 +212,10 @@ function showProject(projectsList) {
       if (projectId == projectsList[j].id) {
         // add content to the overlay modal
         if (projectsList[j].keywords !== null && projectsList[j].length > 0) {
-          var keywords = "<b>Keywords: </b>" + projectsList[j].keywords;
-        } else {
           var keywords = "";
+        } else {
+          var keywords = "<b>Keywords: </b>" + projectsList[j].keywords ;
+          
         }
 
         if (projectsList[j].preferred_name == undefined) {
@@ -229,11 +230,12 @@ function showProject(projectsList) {
           projectsList[j].proj_url !== "http://" &&
           projectsList[j].proj_url !== "TBD"
         ) {
+          
           var projectUrl = document.createElement("a");
           projectUrl.setAttribute("href", projectsList[j].proj_url);
           projectUrl.setAttribute("target", "_blank");
           projectUrl.innerHTML = projectsList[j].proj_url;
-          $("#projectUrl").html("<b>Project URL: </b>");
+          $("#projectUrl").html("<b>View Project: </b>");
           $("#projectUrl").append(projectUrl);
         } else {
           $("#projectUrl").html("");
@@ -247,7 +249,7 @@ function showProject(projectsList) {
           videoUrl.setAttribute("href", projectsList[j].video_url);
           videoUrl.setAttribute("target", "_blank");
           videoUrl.innerHTML = projectsList[j].video_url;
-          $("#videoUrl").html("<b>Video URL: </b>");
+          $("#videoUrl").html("<b>Video Documentation: </b>");
           $("#videoUrl").append(videoUrl);
         } else {
           $("#videoUrl").html("");
@@ -282,7 +284,7 @@ function showProject(projectsList) {
         }
 
         var pitch = replaceHtml(projectsList[j].elevator_pitch);
-        $("#pitch").html("<b>Elevator Pitch:</b>  <br />" + pitch);
+        $("#pitch").html(pitch);
 
         var des = replaceHtmlDes(projectsList[j].description);
         des = replaceHtml(des);
@@ -526,7 +528,6 @@ function showProjectCard(projectsList) {
         } else {
           $("#mainImage").html("");
         }
-
         var pitch = replaceHtml(projectsList[j].elevator_pitch);
         $("#pitch").html("<b>Elevator Pitch:</b>  <br />" + pitch);
 
@@ -546,9 +547,9 @@ function showCurrentProject(projectid) {
   console.log(project);
 
   if (project.keywords !== null && project.length > 0) {
-    var keywords = "<b>Keywords: </b>" + project.keywords;
-  } else {
     var keywords = "";
+  } else {
+    var keywords = "<b>Keywords: </b>" + project.keywords;
   }
 
   if (project.preferred_name == undefined) {

@@ -1,0 +1,54 @@
+
+  /***************************/
+    /*This is the css code for project description page*/
+  /***************************/
+
+  .modal-title {
+    text-align: left;
+    font-size: 30px;
+  }
+
+  
+  #time {
+    color: #707070;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  #author {
+    color: #707070;
+    font-size: 18px;
+    margin-left: 20px;
+
+  }
+
+  #keywords {
+    font-size: 18px;
+  }
+
+  #pitch{
+    font-size: 18px;
+  }
+
+  #projectUrl {
+    font-size: 18px;
+  }
+
+  #videoUrl {
+    font-size: 18px;
+  }
+
+
+  #mainImage img {
+    display: block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    min-width: 560px;
+    width: 100%;
+  }
+  
+  #description{
+    font-size: 15px;
+  }
