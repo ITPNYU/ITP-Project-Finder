@@ -22,31 +22,148 @@
 
   <body>
 
-    <div class="global-nav">
-      <div class="row global-nav-row">
-        <div class="small-13 small-centered columns">
-          <a claslass="global-nav__search-trigger"></a>
-          <a class="global-nav__logo" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+    <!-- BEGIN HEADER -->
+
+    <!-- Mobile Navigation -->
+
+    <div id="mobileNav">
+      <div class="topnav">
+        <a class="global-nav__logo navbar-brand ham-active" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="topLinks">
+          <a href="https://itp.nyu.edu">About ITP</a>
+          <a href="https://itp.nyu.edu/classes">ITP Courses</a>
+          <a href="https://itp.nyu.edu/itp/people">ITP People</a>
+          <a href="https://itp.nyu.edu/ranch/projects">ITP Projects</a>
         </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </div>
 
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg scrolling-navbar">
+      <a class="global-nav__logo navbar-brand" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="x-toplevel"><a href="https://itp.nyu.edu">About ITP</a></li>
+        <li class="x-toplevel"><a href="https://itp.nyu.edu/classes">ITP Courses</a></li>
+        <li class="x-toplevel"><a href="https://itp.nyu.edu/itp/people">ITP People</a></li>
+        <li class="x-toplevel"><a href="https://itp.nyu.edu/ranch/projects">ITP Projects</a></li>
+      </ul>
+    </nav>
 
-    <section class="region-header headroom headroom--top">
 
-      <div class="wrapper responsive">
-        <ul class="main-nav">
-
-          <li class="x-toplevel"><a href="https://itp.nyu.edu">About ITP</a></li>
-          <li class="x-toplevel"><a href="https://itp.nyu.edu/classes">ITP Courses</a></li>
-          <li class="x-toplevel"><a href="https://itp.nyu.edu/itp/people">ITP People</a></li>
-          <li class="x-toplevel"><a href="https://itp.nyu.edu/ranch/projects">ITP Projects</a></li>
-
-        </ul>
+    <!-- Filters -->
+    <div class="container">
+      <h1>ITP Projects Finder</h1>
+      <p>Filter by</p>
+      <div class="filter-container">
+        <div class="custom-select" style="width:200px;">
+          <select id="collection-select">
+            <option value="0">Collection:</option>
+            <option value="1">Physical Computing</option>
+            <option value="2">Computational Media</option>
+            <option value="3">AR/VR/XR</option>
+            <option value="4">Performance</option>
+            <option value="5">Machine Learning</option>
+            <option value="6">Design</option>
+            <option value="7">Sound/Music</option>
+            <option value="8">Data</option>
+            <option value="9">Wearable</option>
+            <option value="10">Fabrication</option>
+            <option value="11">Web Development</option>
+            <option value="12">Installation</option>
+          </select>
+        </div>
+        <div class="custom-select" style="width:200px;">
+          <select>
+            <option value="0">Technology:</option>
+            <option value="1">Arduino</option>
+            <option value="2">P5JS</option>
+            <option value="3">Javascript</option>
+            <option value="4">Unity</option>
+            <option value="5">Max</option>
+            <option value="6">Tensorflow</option>
+            <option value="7">Ableton</option>
+            <option value="8">Unreal</option>
+            <option value="9">Photoshop</option>
+            <option value="10">Processing</option>
+            <option value="11">Web</option>
+            <option value="12">D3JS</option>
+          </select>
+        </div>
+        <div class="search"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus>
+          <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
       </div>
-    </section>
+      <quote>ITP/ IMA explores the boundaries of art, technology, design and culture. We aim to inspire, teach, and delight.  We are the center for recently impossible.</quote>
+    </div>
+    </div>
+    </div>
+
+    <!-- END HEADER -->
 
     <div class="container">
+
+      <!-- COLLECTIONS --> 
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Collections:</h2>
+        </div>
+        <div class="col-md-6">
+          <a class="collection-link" href="#">
+            <div class="collection-card">
+              <span class="overlay">
+                <img src="img/pcomp.jpg" alt="" class="img-responsive">
+              </span>
+              <div class="centered-card">
+                <p class="collection-title">Physical Computing</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a class="collection-link" href="#">
+            <div class="collection-card">
+              <span class="overlay">
+                <img src="img/creativecoding.jpg" alt="" class="img-responsive">
+              </span>
+              <div class="centered-card">
+                <p class="collection-title">Computational Media</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a class="collection-link" href="#">
+            <div class="collection-card">
+              <span class="overlay">
+                <img src="img/mixedreality.png" alt="" class="img-responsive">
+              </span>
+              <div class="centered-card">
+                <p class="collection-title">Mixed Reality</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a class="collection-link" href="#">
+            <div class="collection-card">
+              <span class="overlay">
+                <img src="img/performance.jpg" alt="" class="img-responsive">
+              </span>
+              <div class="centered-card">
+                <p class="collection-title">Performance</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
 
       <!-- Modal -->
       <div class="modal fade bs-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLabel">
@@ -83,28 +200,14 @@
       </div>
       <!-- End of Modal -->
 
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="centered">ITP Projects Finder</h1>
-          <div class="centered"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus></div>
-          <button class="button button-royal button-circle button-giant" id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </div>
-      </div>
 
       <div class="row">
         <div class="col-md-12">
-          <div class="responsive">
-            <a  class='keys' id="wearable" onclick='getProjectsByKey("wearable"); return false;' href='#' tabindex="0">Wearable</a>
-            <a class='keys' id="pcomp" onclick='getProjectsByKey("pcomp"); return false;' tabindex="0" href="#">Physical Computing</a>
-            <a class='keys' id="computArt"  onclick='getProjectsByKey("compuArt"); return false;' tabindex="0" href="#">Computational Art</a>
-            <a class='keys' id="storytelling" onclick='getProjectsByKey("storytelling"); return false;' tabindex="0" href="#">Storytelling</a>
-            <a class='keys' id="thesis" onclick='getProjectsByKey("thesis"); return false;' tabindex="0" href="#">Thesis</a>
-          </div>
+          <h2>Recent Projects</h2>
           <div id="noResult"></div>
           <div class="se-pre-con">LOADING...</div>
         </div>
       </div>
-
       <div class="row" id="card-holder"></div>
 
 
@@ -117,12 +220,12 @@
           </div>
 
           <p class="totop margin"> 
-            <a href="#top" id="totop">Back to top</a> 
+          <a href="#top" id="totop">Back to top</a> 
           </p>
 
         </div>
       </div>
-    <!-- End of Container -->
+      <!-- End of Container -->
     </div>
 
     <footer class="footer">
@@ -135,4 +238,11 @@
 
   </body>
   <script src="js/main.js"></script>
+
+  <script>
+    window.onload = function (){
+      getProjectsByKey("Physical Computing")
+    }
+  </script>
+
 </html>
