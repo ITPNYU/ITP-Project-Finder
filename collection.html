@@ -57,7 +57,7 @@
 
     <!-- Filters -->
     <div class="container">
-      <h1>ITP Projects Finder</h1>
+      <h1><a href="/">ITP Projects Finder</a></h1>
       <p>Filter by</p>
       <div class="filter-container">
         <div class="custom-select" style="width:200px;">
@@ -98,7 +98,6 @@
           <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
-      <quote>ITP/ IMA explores the boundaries of art, technology, design and culture. We aim to inspire, teach, and delight.  We are the center for recently impossible.</quote>
     </div>
     </div>
     </div>
@@ -106,70 +105,9 @@
     <!-- END HEADER -->
 
     <div class="container">
-
-      <!-- COLLECTIONS --> 
       <div class="row">
         <div class="col-md-12">
-          <h2>Collections:</h2>
-        </div>
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Physical Computing">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/pcomp.jpg" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Physical Computing</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Creative Coding">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/creativecoding.jpg" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Computational Media</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Mixed Reality">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/mixedreality.png" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Mixed Reality</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Performance">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/performance.jpg" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Performance</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-
-
-
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Recent Projects</h2>
+          <h2 id="collection-search">Loading Collection...</h2>
           <div id="noResult"></div>
           <div class="se-pre-con">LOADING...</div>
         </div>
@@ -207,8 +145,21 @@
 
   <script>
     window.onload = function (){
-      getProjectsByKey("Physical Computing")
-    }
+      let searchvalue = window.location.hash
+      searchvalue = searchvalue.substring(1)
+
+      if (searchvalue.includes("%20")){
+        searchvalue  = searchvalue.split("%20")
+        console.log(searchvalue)
+        searchvalue = searchvalue.join(" ");
+        console.log(searchvalue, "join")
+        $("#collection-search").html(searchvalue)
+        getProjectsByKey(searchvalue)
+      } else {
+        $("#collection-search").html(searchvalue)
+        getProjectsByKey(searchvalue)
+      }
+    } 
   </script>
 
 </html>
