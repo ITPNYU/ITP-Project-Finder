@@ -310,7 +310,6 @@ input:focus {
 }
 
 .footer {
-  position: fixed;
   margin: 0;
   bottom: 0;
   width: 100%;
@@ -538,62 +537,6 @@ nav {
   margin-right: 5vw;
 }
 
-/* The container must be positioned relative: */
-.custom-select {
-  position: relative;
-  font-size:18px;
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-}
-
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #000 transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #000 transparent;
-  top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  background-color:#F4F4F4;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(200,200,200)
-}
 
 .filter-container {
   display:flex;
@@ -601,6 +544,7 @@ nav {
 
 .search {
   margin-left:auto;
+  display: inline-flex;
 }
 
 #theInput::placeholder{
@@ -705,6 +649,7 @@ p {
 }
 
 .projectLink  {
+  background-color: unset;
   border-radius: 0px;
   border: solid 1px;
   color: #57068C;
@@ -713,4 +658,25 @@ p {
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
+  margin-top:25px;
 }
+
+select#technology{
+  margin-left:35px;
+}
+
+select {
+    border-radius: 0px;
+    width: 100%;
+    height: 35px;
+    border:none;
+    border-bottom: 1px solid rgb(231, 231, 235);
+    background-color:unset;
+}
+
+select:focus{
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 1px;
+}
+
+

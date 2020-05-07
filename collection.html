@@ -58,43 +58,43 @@
     <!-- Filters -->
     <div class="container">
       <h1><a href="/">ITP Projects Finder</a></h1>
-      <p>Filter by</p>
+      <label for="collection technology">Filter by:</label>
       <div class="filter-container">
         <div class="custom-select" style="width:200px;">
-          <select id="collection-select">
-            <option value="0">Collection:</option>
-            <option value="1">Physical Computing</option>
-            <option value="2">Computational Media</option>
-            <option value="3">AR/VR/XR</option>
-            <option value="4">Performance</option>
-            <option value="5">Machine Learning</option>
-            <option value="6">Design</option>
-            <option value="7">Sound/Music</option>
-            <option value="8">Data</option>
-            <option value="9">Wearable</option>
-            <option value="10">Fabrication</option>
-            <option value="11">Web Development</option>
-            <option value="12">Installation</option>
+          <select id="collection" onchange="if (this.value) window.location.href=this.value; location.reload(1)" >
+            <option value="">Collection:</option>
+            <option value="collection.html#Physical Computing">Physical Computing</option>
+            <option value="collection.html#ICM">Computational Media</option>
+            <option value="collection.html#Mixed Reality">AR/VR/XR</option>
+            <option value="collection.html#Performance">Performance</option>
+            <option value="collection.html#Machine Learning">Machine Learning</option>
+            <option value="collection.html#Design">Design</option>
+            <option value="collection.html#Music">Sound/Music</option>
+            <option value="collection.html#Data">Data</option>
+            <option value="collection.html#Wearable">Wearable</option>
+            <option value="collection.html#Fabrication">Fabrication</option>
+            <option value="collection.html#Web Development">Web Development</option>
+            <option value="collection.html#Installation">Installation</option>
           </select>
         </div>
-        <div class="custom-select" style="width:200px;">
-          <select>
-            <option value="0">Technology:</option>
-            <option value="1">Arduino</option>
-            <option value="2">P5JS</option>
-            <option value="3">Javascript</option>
-            <option value="4">Unity</option>
-            <option value="5">Max</option>
-            <option value="6">Tensorflow</option>
-            <option value="7">Ableton</option>
-            <option value="8">Unreal</option>
-            <option value="9">Photoshop</option>
-            <option value="10">Processing</option>
-            <option value="11">Web</option>
-            <option value="12">D3JS</option>
+        <div class="custom-select" style="width:200px;" >
+          <select id="technology"  onchange="if (this.value) window.location.href=this.value; location.reload(1)"  >
+            <option value="">Technology:</option>
+            <option value="collection.html#Arduino">Arduino</option>
+            <option value="collection.html#P5">P5JS</option>
+            <option value="collection.html#Javascript">Javascript</option>
+            <option value="collection.html#Unity">Unity</option>
+            <option value="collection.html#Max">Max</option>
+            <option value="collection.html#Tensorflow">Tensorflow</option>
+            <option value="collection.html#Ableton">Ableton</option>
+            <option value="collection.html#Unreal">Unreal</option>
+            <option value="collection.html#Photoshop">Photoshop</option>
+            <option value="collection.html#Processing">Processing</option>
+            <option value="collection.html#Web">Web</option>
+            <option value="collection.html#D3">D3JS</option>
           </select>
         </div>
-        <div class="search"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus>
+        <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus>
           <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
@@ -150,9 +150,7 @@
 
       if (searchvalue.includes("%20")){
         searchvalue  = searchvalue.split("%20")
-        console.log(searchvalue)
         searchvalue = searchvalue.join(" ");
-        console.log(searchvalue, "join")
         $("#collection-search").html(searchvalue)
         getProjectsByKey(searchvalue)
       } else {
