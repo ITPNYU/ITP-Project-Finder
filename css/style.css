@@ -679,4 +679,21 @@ select:focus{
   border-width: 1px;
 }
 
+h2 {
+  font-family: 'Libre Baskerville', serif;
 
+}
+h3 {
+  font-family: 'Libre Baskerville', serif;
+  line-height:1.5;
+
+}
+
+p {
+
+    font-size: 1.5rem;
+}
+
+quote {
+  font-family: 'Libre Baskerville', serif;
+}
