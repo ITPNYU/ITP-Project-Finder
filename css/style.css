@@ -682,20 +682,29 @@ h2 {
 }
 
 h3 {
-  font-family: 'Libre Baskerville', serif;
-  line-height:1.5;
+  font-family: 'Lato', sans-serif;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
 }
 
 quote {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Lato', sans-serif;
 }
 
 input:focus {
   border:solid;
   border-color: rgba(255, 94, 153, 0.65);
   border-width: 1px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:900;
+}
+
+#project-title {
+  font-family: 'Libre Baskerville', serif;
 }

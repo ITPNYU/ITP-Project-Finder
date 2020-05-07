@@ -555,7 +555,7 @@ function showCurrentProject(projectid) {
 
     let keys = project.keywords.split(',')
 
-    var keywords = `<h4>Keywords: </h4> <span>`
+    var keywords = `<h3>Keywords: </h3> <span>`
     for(let i = 0; i<keys.length;i++){
       keywords += `<a href="collection.html#${keys[i]}">${keys[i]}</a> `
     }
@@ -595,7 +595,7 @@ function showCurrentProject(projectid) {
     $("#videoUrl").html("");
   }
 
-  $("#project-title").html(`<h3>${project.name}</h3>`)
+  $("#project-title").html(`<h2>${project.name}</h2>`)
   let projectDetails=
   $("#project-details").html(`<span class="time">${project.time}</span> | <span>By ${thisCreatorName}</span>`)
   $("#keywords").html(keywords);
