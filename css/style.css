@@ -431,6 +431,12 @@ input:focus {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
     justify-content: space-around;
   }
+
+  .mobile-filter-container {
+  
+  }
+  .filter-container {
+  }
 }
 
 /* Small screens */
@@ -707,4 +713,8 @@ h1 {
 
 #project-title {
   font-family: 'Libre Baskerville', serif;
+}
+
+.col-md-3.custom-select {
+  padding:unset;
 }
