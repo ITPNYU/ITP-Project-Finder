@@ -60,10 +60,10 @@
     <!-- Filters -->
     <div class="container">
       <h1><a href="/"> ITP Projects Finder</a></h1>
-      <label for="collection technology">Filter by:</label>
+      <label for="collection technology" id="filter">Filter by:</label>
       <div class="filter-container">
         <div class="custom-select" style="width:200px;">
-          <select id="collection" onchange="if (this.value) window.location.href=this.value" >
+          <select id="collection" aria-label="filter" onchange="if (this.value) window.location.href=this.value" >
             <option value="">Collection:</option>
             <option value="collection.html#Physical Computing">Physical Computing</option>
             <option value="collection.html#ICM">Computational Media</option>
@@ -80,7 +80,7 @@
           </select>
         </div>
         <div class="custom-select" style="width:200px;" >
-          <select id="technology"  onchange="if (this.value) window.location.href=this.value" >
+          <select id="technology" aria-label="filter"  onchange="if (this.value) window.location.href=this.value" >
             <option value="">Technology:</option>
             <option value="collection.html#Arduino">Arduino</option>
             <option value="collection.html#P5">P5JS</option>
@@ -88,7 +88,7 @@
             <option value="collection.html#Unity">Unity</option>
             <option value="collection.html#Max">Max</option>
             <option value="collection.html#Tensorflow">Tensorflow</option>
-            <option value="Ableton">Ableton</option>
+            <option value="collection.html#Ableton">Ableton</option>
             <option value="collection.html#Unreal">Unreal</option>
             <option value="collection.html#Photoshop">Photoshop</option>
             <option value="collection.html#Processing">Processing</option>
@@ -96,7 +96,7 @@
             <option value="collection.html#D3">D3JS</option>
           </select>
         </div>
-        <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus>
+        <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Search ITP Projects" >
           <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
@@ -112,7 +112,7 @@
       <!-- COLLECTIONS --> 
       <div class="row">
         <div class="col-md-12">
-          <h3>Collections:</h3>
+          <h2>Collections:</h2>
         </div>
         <div class="col-md-6">
           <a class="collection-link" href="collection.html#Physical Computing">
@@ -169,9 +169,9 @@
 
 
 
-      <div class="row">
+      <div class="row" style="margin-top:35px;">
         <div class="col-md-12">
-          <h3>Recent Projects</h3>
+          <h2>Recent Projects</h2>
           <div id="noResult"></div>
           <div class="se-pre-con">LOADING...</div>
         </div>

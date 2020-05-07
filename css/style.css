@@ -10,7 +10,7 @@ body {
 }
 
 input{
-  padding-left: 0px;
+  padding-left: 20px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -169,9 +169,7 @@ transition: .3s all ease;
 }
 
 #card-holder{
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0px;
 }
 
 #mainImage img {
@@ -681,19 +679,23 @@ select:focus{
 
 h2 {
   font-family: 'Libre Baskerville', serif;
-
 }
+
 h3 {
   font-family: 'Libre Baskerville', serif;
   line-height:1.5;
-
 }
 
 p {
-
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 quote {
   font-family: 'Libre Baskerville', serif;
+}
+
+input:focus {
+  border:solid;
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 1px;
 }

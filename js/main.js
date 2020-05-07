@@ -36,6 +36,7 @@ function getProjectsByKey(userInput) {
         allProjects = projectsByKey;
         addCard(allProjects);
         showProject(allProjects);
+        $("#collection-search").html(userInput)
         addSubUrl();
         $("#collection-search").html(userInput)
       }
@@ -618,7 +619,7 @@ function showCurrentProject(projectid) {
 // On click add ProjectId as hash
 function addProjectUrl(projectid) {
     // console.log(window.location.hash)
-    var newUrl =  `project.html#project?projectId=${projectid}`;
+    var newUrl =  `project.html?#project?projectId=${projectid}`;
     window.location=newUrl
     console.log(window.location)
 }

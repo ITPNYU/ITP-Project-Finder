@@ -2,16 +2,22 @@ var projectsByKey = [];
 var allProjects = [];
 var noProjByKey = false;
 
-function getInput(event) {
-  var val = document.getElementById("theInput").value;
-  if (!val || val == "")
-    return $("#noResult").html("Please type some keywords.");
-  $("#card-holder").empty();
-  $("#noResult").html("");
-  allProjects = [];
-  projectsByKey = [];
-  getProjectsByKey(val);
-  getProjectsByAuthor(val);
+// function getInput(event) {
+//   var val = document.getElementById("theInput").value;
+//   if (!val || val == "")
+//     return $("#noResult").html("Please type some keywords.");
+//   $("#card-holder").empty();
+//   $("#noResult").html("");
+//   allProjects = [];
+//   projectsByKey = [];
+//   getProjectsByKey(val);
+//   getProjectsByAuthor(val);
+// }
+function searchFunction() {
+  let location = window.location;
+  let search = document.getElementById("searchbar").value
+  console.log(location)
+  window.location.href="./collection.html#"+search;
 }
 
 function getProjectsByKey(userInput) {
@@ -392,15 +398,15 @@ $("#thesis").click(function() {
 });
 
 // document.getElementById('theInput').addEventListener('keyup', getInput);
-$("input").keyup(
-  debounce(function() {
-    getInput();
-  }, 500)
-);
-$("#searchBtn").click(function() {
-  getInput;
-  return false;
-});
+// $("input").keyup(
+//   debounce(function() {
+//     getInput();
+//   }, 500)
+// );
+// $("#searchBtn").click(function() {
+//   getInput;
+//   return false;
+// });
 
 $(window).scroll(function() {
   if ($(this).scrollTop() > 50) {

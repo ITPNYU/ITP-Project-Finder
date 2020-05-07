@@ -88,7 +88,7 @@
             <option value="collection.html#Unity">Unity</option>
             <option value="collection.html#Max">Max</option>
             <option value="collection.html#Tensorflow">Tensorflow</option>
-            <option value="Ableton">Ableton</option>
+            <option value="collection.html#Ableton">Ableton</option>
             <option value="collection.html#Unreal">Unreal</option>
             <option value="collection.html#Photoshop">Photoshop</option>
             <option value="collection.html#Processing">Processing</option>
@@ -96,8 +96,16 @@
             <option value="collection.html#D3">D3JS</option>
           </select>
         </div>
-        <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus>
-          <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <div class="search col-md-3">
+          <form onsubmit="searchFunction()" id="searchform">
+            <input type="text" id="searchbar" placeholder="Search ITP Projects">
+          </form>
+          <button class="button button-royal  " form="searchform" id="searchBtn" aria-label="Search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <!-- <form action=""></form> -->
+          <!-- <form onsubmit="submitForm()"> -->
+          <!-- <input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" > -->
+          <!-- <button class="button button-royal  " id="searchBtn" aria-label="Search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> -->
+          <!-- </form> -->
         </div>
       </div>
     </div>

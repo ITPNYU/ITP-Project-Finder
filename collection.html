@@ -65,7 +65,7 @@
       <label for="collection technology">Filter by:</label>
       <div class="filter-container">
         <div class="custom-select" style="width:200px;">
-          <select id="collection" onchange="if (this.value) window.location.href=this.value; location.reload(1)" >
+          <select aria-label="filter" id="collection" onchange="if (this.value) window.location.href=this.value; location.reload(1)" >
             <option value="">Collection:</option>
             <option value="collection.html#Physical Computing">Physical Computing</option>
             <option value="collection.html#ICM">Computational Media</option>
@@ -82,7 +82,7 @@
           </select>
         </div>
         <div class="custom-select" style="width:200px;" >
-          <select id="technology"  onchange="if (this.value) window.location.href=this.value; location.reload(1)"  >
+          <select id="technology" aria-label="filter" onchange="if (this.value) window.location.href=this.value; location.reload(1)"  >
             <option value="">Technology:</option>
             <option value="collection.html#Arduino">Arduino</option>
             <option value="collection.html#P5">P5JS</option>
@@ -98,7 +98,7 @@
             <option value="collection.html#D3">D3JS</option>
           </select>
         </div>
-        <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Type Keywords / Names" autofocus>
+        <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Search ITP Projects" >
           <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
