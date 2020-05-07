@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/buttons.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/page.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -98,7 +97,6 @@
           <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
-      <quote>ITP/ IMA explores the boundaries of art, technology, design and culture. We aim to inspire, teach, and delight.  We are the center for recently impossible.</quote>
     </div>
     </div>
     </div>
@@ -106,91 +104,87 @@
     <!-- END HEADER -->
 
     <div class="container">
-
-      <!-- COLLECTIONS --> 
       <div class="row">
-        <div class="col-md-12">
-          <h2>Collections:</h2>
+        <div class="col-md-9">
+          <div id="project-title"></div>
+          <div id="project-details"></div>
+          <!-- <div id="time"></div> -->
+          <!-- <div id="author"></div> -->
+          <div id="pitch"></div>
         </div>
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Physical Computing">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/pcomp.jpg" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Physical Computing</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Creative Coding">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/creativecoding.jpg" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Computational Media</p>
-              </div>
-            </div>
-          </a>
+        <div class="col-md-3">
+          <div id="keywords" class=""></div>
+          <div id="projectUrl"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Mixed Reality">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/mixedreality.png" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Mixed Reality</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a class="collection-link" href="collection.html#Performance">
-            <div class="collection-card">
-              <span class="overlay">
-                <img src="img/performance.jpg" alt="" class="img-responsive">
-              </span>
-              <div class="centered-card">
-                <p class="collection-title">Performance</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-
-
 
       <div class="row">
         <div class="col-md-12">
-          <h2>Recent Projects</h2>
-          <div id="noResult"></div>
-          <div class="se-pre-con">LOADING...</div>
+          <div id="mainImage"></div>
+          <div id="projectImage" class="projectImage"></div>
         </div>
       </div>
-      <div class="row" id="card-holder"></div>
-
 
       <div class="row">
         <div class="col-md-12">
-
-          <div class="centered">
-            <button class="button button-royal button-circle button-giant" id="loadMore" aria-labelledby="loadMoreText"><i class="fa fa-plus"></i></button>
-            <p class="gray" id="loadMoreText">LOAD MORE</p>
-          </div>
-
-          <p class="totop margin"> 
-          <a href="#top" id="totop">Back to top</a> 
-          </p>
-
+          <div id="description"></div>
         </div>
       </div>
+
+
+      <!-- <!-1- Modal -1-> -->
+      <!-- <div class="modal fade bs-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLabel"> -->
+      <!--   <div class="modal-dialog modal-lg" role="document"> -->
+
+      <!--     <div class="modal-content"> -->
+      <!--       <div class="modal-header"> -->
+      <!--         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+      <!--         <h4 class="modal-title" id="exampleModalLabel">Project Title</h4> -->
+      <!--       </div> -->
+
+      <!--       <div class="modal-body"> -->
+      <!--         <div class="centered"> -->
+      <!--           <div id="author"></div> -->
+      <!--           <div id="time"></div> -->
+      <!--           <div id="mainImage"></div> -->
+      <!--         </div> -->
+
+      <!--         <div> -->
+      <!--           <div id="keywords" class="margin"></div> -->
+      <!--           <div id="projectUrl" class="margin"></div> -->
+      <!--           <div id="videoUrl"  class="margin" aria-labelledby="videoUrl"></div> -->
+      <!--           <div id="pitch" class="margin"></div> -->
+      <!--           <div id="description" class="margin"></div> -->
+      <!--         </div> -->
+      <!--       </div> -->
+
+      <!--       <div class="modal-footer"> -->
+      <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+      <!--       </div> -->
+
+      <!--     </div> -->
+      <!--   </div> -->
+      <!-- </div> -->
+      <!-- <!-1- End of Modal -1-> -->
+          <!-- <h2>Recent Projects</h2> -->
+          <!-- <div id="noResult"></div> -->
+          <!-- <div class="se-pre-con">LOADING...</div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      <!-- <div class="row" id="card-holder"></div> -->
+
+
+      <!-- <div class="row"> -->
+        <!-- <div class="col-md-12"> -->
+          <!-- <div class="centered"> -->
+          <!--   <button class="button button-royal button-circle button-giant" id="loadMore" aria-labelledby="loadMoreText"><i class="fa fa-plus"></i></button> -->
+          <!--   <p class="gray" id="loadMoreText">LOAD MORE</p> -->
+          <!-- </div> -->
+          <!-- <p class="totop margin"> --> 
+          <!-- <a href="#top" id="totop">Back to top</a> --> 
+          <!-- </p> -->
+        <!-- </div> -->
+      <!-- </div> -->
       <!-- End of Container -->
     </div>
 
@@ -203,12 +197,7 @@
     </footer>
 
   </body>
-  <script src="js/main.js"></script>
+  <script src="js/project.js"></script>
 
-  <script>
-    window.onload = function (){
-      getProjectsByKey("Physical Computing")
-    }
-  </script>
 
 </html>

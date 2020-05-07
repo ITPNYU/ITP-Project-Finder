@@ -20,7 +20,6 @@ function getProjectsByKey(userInput) {
     url: "https://itp.nyu.edu/ranch/api/projects-finder/" + userInput,
     failure: function(err) {
       // return console.log("Sorry, we could not find any data from api search by keywords.");
-      console.log("fail")
       return;
     },
     success: function(data) {
@@ -37,7 +36,6 @@ function getProjectsByKey(userInput) {
         addCard(allProjects);
         showProject(allProjects);
         addSubUrl();
-        $("#collection-search").html(userInput)
       }
     }
   });
@@ -119,7 +117,7 @@ function addCard(obj) {
     var htmlToAppend =
       "<div class='card-container col-sm-4 col-md-4 centered'>" +
       //"<a href='?projectId=" + obj[i].id + "'>" +
-      "<button class='projectCard card overlay white'  data-target='#exampleModal' onclick='addProjectUrl(" + obj[i].id +")'>'" +
+      "<button class='projectCard card overlay white' data-toggle='modal' data-target='#exampleModal' onclick='addProjectUrl(" + obj[i].id +")'>'" +
       // "<button></button>" +
       "<div class='bg'></div>" +
       "<div class='card-text'>" +
@@ -169,7 +167,7 @@ function addCard(obj) {
     thisCard.setAttribute("data-whatever", obj[i].id);
     var oldUrl=$(this).attr("href");
     var newUrl = oldUrl + `?projectId=${obj[i].id}`;
-    thisCard.setAttribute("href", `/project.html#project?projectId=${obj[i].id}`);
+    thisCard.setAttribute("href", `project?projectId=${obj[i].id}`);
   }
   positionFooter();
   if (i <= -1 && obj.length > 9) {
@@ -282,7 +280,7 @@ function showProject(projectsList) {
           }
           $("#mainImage").html(img);
         } else {
-          $("#mainImage").html("");
+          $("#mainImage").html(img);
         }
 
         var pitch = replaceHtml(projectsList[j].elevator_pitch);
@@ -431,7 +429,6 @@ $(document).ready(function() {
   if (results == null) {
     return null;
   } else {
-    console.log(results);
     $.ajax({
       type: "GET",
       url: "https://itp.nyu.edu/ranch/api/projects/" + results[1],
@@ -482,7 +479,7 @@ function showProjectCard(projectsList) {
           projectUrl.setAttribute("href", projectsList[j].proj_url);
           projectUrl.setAttribute("target", "_blank");
           projectUrl.innerHTML = projectsList[j].proj_url;
-          $("#projectUrl").html("<b>Project URL: </b>");
+          $("#projectUrl").html("ds<b>Project URL: </b>");
           $("#projectUrl").append(projectUrl);
         } else {
           $("#projectUrl").html("");
@@ -543,15 +540,20 @@ function showProjectCard(projectsList) {
 
 function showCurrentProject(projectid) {
   // add content to the overlay modal
-
   let project = projectid.substring(1, projectid.length - 1);
   project = JSON.parse(project);
-  console.log(project);
 
   if (project.keywords !== null && project.length > 0) {
     var keywords = "";
   } else {
-    var keywords = "<b>Keywords: </b>" + project.keywords;
+
+    let keys = project.keywords.split(',')
+
+    var keywords = `<h4>Keywords: </h4> <span>`
+    for(let i = 0; i<keys.length;i++){
+      keywords += `<a href="collection.html#${keys[i]}">${keys[i]}</a> `
+    }
+    keywords+="</span>"
   }
 
   if (project.preferred_name == undefined) {
@@ -570,7 +572,7 @@ function showCurrentProject(projectid) {
     // project.setAttribute('href', project.proj_url);
     // project.setAttribute('target', "_blank");
     project.innerHTML = project.proj_url;
-    $("#projectUrl").html("<b>Project URL: </b>");
+    $("#projectUrl").html(`<a href="${project.proj_url}"><button class="projectLink">View Project Website</button></a>`);
     $("#projectUrl").append(projectUrl);
   } else {
     $("#projectUrl").html("");
@@ -587,9 +589,9 @@ function showCurrentProject(projectid) {
     $("#videoUrl").html("");
   }
 
-  $("#exampleModalLabel").html(project.name);
-  $("#author").html(thisCreatorName);
-  $("#time").html(project.time);
+  $("#project-title").html(`<h3>${project.name}</h3>`)
+  let projectDetails=
+  $("#project-details").html(`<span class="time">${project.time}</span> | <span>By ${thisCreatorName}</span>`)
   $("#keywords").html(keywords);
 
   if (project.main_img !== false && project.main_img !== undefined) {
@@ -602,25 +604,26 @@ function showCurrentProject(projectid) {
     } else {
       img.src = "https://itp.nyu.edu/projects_documents/" + project.main_img;
     }
-    $("#mainImage").html(img);
+    // $("#mainImage").html(img);
+    $("#projectImage").html(img);
   } else {
     $("#mainImage").html("");
   }
 
   var pitch = replaceHtml(project.elevator_pitch);
-  $("#pitch").html("<b>Elevator Pitch:</b>  <br />" + pitch);
+  $("#pitch").html(`<p>${pitch}</p>`);
 
   var des = replaceHtmlDes(project.description);
   des = replaceHtml(des);
-  $("#description").html("<b>Description:</b>  <br />" + des);
+  $("#description").html(`<p>${des}</p>`);
 }
 
 // On click add ProjectId as hash
 function addProjectUrl(projectid) {
-    // console.log(window.location.hash)
-    var newUrl =  `project.html#project?projectId=${projectid}`;
-    window.location=newUrl
-    console.log(window.location)
+    console.log(window.location.hash)
+    var newUrl =  `project?projectId=${projectid}`;
+    window.location.hash=newUrl
+    console.log(window.location.hash)
 }
 
 // MOBILE MENU SCRIPT
