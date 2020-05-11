@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ITP Projects Finder</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- BEGIN HEADER -->
+
+    <!-- Mobile Navigation -->
+
+    <div id="mobileNav">
+      <div class="topnav">
+        <a class="global-nav__logo navbar-brand ham-active" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="topLinks">
+          <a href="https://itp.nyu.edu">About ITP</a>
+          <a href="https://itp.nyu.edu/classes">ITP Courses</a>
+          <a href="https://itp.nyu.edu/itp/people">ITP People</a>
+          <a href="https://itp.nyu.edu/ranch/projects">ITP Projects</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg scrolling-navbar">
+      <a class="global-nav__logo navbar-brand" href="https://itp.nyu.edu" title="NYU | Tisch Homepage" aria-label="NY Logo"></a>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="x-toplevel"><a href="https://itp.nyu.edu">About ITP</a></li>
+        <li class="x-toplevel"><a href="https://itp.nyu.edu/classes">ITP Courses</a></li>
+        <li class="x-toplevel"><a href="https://itp.nyu.edu/itp/people">ITP People</a></li>
+        <li class="x-toplevel"><a href="https://itp.nyu.edu/ranch/projects">ITP Projects</a></li>
+      </ul>
+    </nav>
+
+
+    <!-- Filters -->
+    <div class="container">
+      <h1><a href="./index.html">ITP Projects Finder</a></h1>
+      <label for="collection technology">Filter by:</label>
+      <div class="filter-container">
+        <div class="custom-select col-md-3">
+          <select aria-label="filter" id="collection" onchange="if (this.value) window.location.href=this.value; location.reload(1)" >
+            <option value="">Collection:</option>
+            <option value="collection.html#Physical Computing">Physical Computing</option>
+            <option value="collection.html#Mixed Reality">AR/VR/XR</option>
+            <option value="collection.html#Performance">Performance</option>
+            <option value="collection.html#Machine Learning">Machine Learning</option>
+            <option value="collection.html#Design">Design</option>
+            <option value="collection.html#Music">Sound/Music</option>
+            <option value="collection.html#Data">Data</option>
+            <option value="collection.html#Wearable">Wearable</option>
+            <option value="collection.html#Fabrication">Fabrication</option>
+            <option value="collection.html#Installation">Installation</option>
+          </select>
+        </div>
+        <div class="custom-select col-md-3">
+          <select id="technology" aria-label="filter" onchange="if (this.value) window.location.href=this.value; location.reload(1)"  >
+            <option value="">Technology:</option>
+            <option value="collection.html#Arduino">Arduino</option>
+            <option value="collection.html#Javascript">Javascript</option>
+            <option value="collection.html#Unity">Unity</option>
+            <option value="collection.html#Tensorflow">Tensorflow</option>
+            <option value="collection.html#Ableton">Ableton</option>
+            <option value="collection.html#Unreal">Unreal</option>
+            <option value="collection.html#Photoshop">Photoshop</option>
+            <option value="collection.html#Processing">Processing</option>
+          </select>
+        </div>
+        <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Search ITP Projects" >
+          <button class="button button-royal  " id="searchBtn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- END HEADER -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="collection-search">Loading Collection...</h2>
+          <div id="noResult"></div>
+          <div class="se-pre-con">LOADING...</div>
+        </div>
+      </div>
+      <div class="row" id="card-holder"></div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="centered">
+            <button class="button button-royal button-circle button-giant" id="loadMore" aria-labelledby="loadMoreText"><i class="fa fa-plus"></i></button>
+            <p class="gray" id="loadMoreText">LOAD MORE</p>
+          </div>
+
+          <p class="totop margin"> 
+          <a href="#top" id="totop">Back to top</a> 
+          </p>
+
+        </div>
+      </div>
+      <!-- End of Container -->
+    </div>
+
+    <footer class="footer">
+      <div class="centered text-muted">
+        <p class="no-space">We welcome your feedback and contributions on <a href="https://github.com/yining1023/itp-project-finder" target="_blank">GitHub</a>.</p>
+        <p class="no-space">Update or add your projects into the <a href="https://itp.nyu.edu/projects/" target="_blank">ITP projects database</a></p>
+        <p class="no-space"><a href="https://www.nyu.edu/footer/accessibility.html" target="_blank">Accessibility</a></p>
+      </div>
+    </footer>
+
+  </body>
+  <script src="js/main.js"></script>
+
+  <script>
+    window.onload = function (){
+      let searchvalue = window.location.hash
+      searchvalue = searchvalue.substring(1)
+
+      if (searchvalue.includes("%20")){
+        searchvalue  = searchvalue.split("%20")
+        searchvalue = searchvalue.join(" ");
+        $("#collection-search").html(searchvalue)
+        getProjectsByKey(searchvalue)
+      } else {
+        $("#collection-search").html(searchvalue)
+        getProjectsByKey(searchvalue)
+      }
+    } 
+  </script>
+
+</html>

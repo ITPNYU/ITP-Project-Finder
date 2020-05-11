@@ -20,6 +20,7 @@ function getProjectsByKey(userInput) {
     url: "https://itp.nyu.edu/ranch/api/projects-finder/" + userInput,
     failure: function(err) {
       // return console.log("Sorry, we could not find any data from api search by keywords.");
+      console.log("fail")
       return;
     },
     success: function(data) {
@@ -35,7 +36,9 @@ function getProjectsByKey(userInput) {
         allProjects = projectsByKey;
         addCard(allProjects);
         showProject(allProjects);
+        $("#collection-search").html(userInput)
         addSubUrl();
+        $("#collection-search").html(userInput)
       }
     }
   });
@@ -117,7 +120,7 @@ function addCard(obj) {
     var htmlToAppend =
       "<div class='card-container col-sm-4 col-md-4 centered'>" +
       //"<a href='?projectId=" + obj[i].id + "'>" +
-      "<button class='projectCard card overlay white' data-toggle='modal' data-target='#exampleModal' onclick='addProjectUrl(" + obj[i].id +")'>'" +
+      "<button class='projectCard card overlay white'  data-target='#exampleModal' onclick='addProjectUrl(" + obj[i].id +")'>'" +
       // "<button></button>" +
       "<div class='bg'></div>" +
       "<div class='card-text'>" +
@@ -167,7 +170,7 @@ function addCard(obj) {
     thisCard.setAttribute("data-whatever", obj[i].id);
     var oldUrl=$(this).attr("href");
     var newUrl = oldUrl + `?projectId=${obj[i].id}`;
-    thisCard.setAttribute("href", `project?projectId=${obj[i].id}`);
+    thisCard.setAttribute("href", `/project.html#project?projectId=${obj[i].id}`);
   }
   positionFooter();
   if (i <= -1 && obj.length > 9) {
@@ -212,9 +215,10 @@ function showProject(projectsList) {
       if (projectId == projectsList[j].id) {
         // add content to the overlay modal
         if (projectsList[j].keywords !== null && projectsList[j].length > 0) {
-          var keywords = "<b>Keywords: </b>" + projectsList[j].keywords;
-        } else {
           var keywords = "";
+        } else {
+          var keywords = "<b>Keywords: </b>" + projectsList[j].keywords ;
+          
         }
 
         if (projectsList[j].preferred_name == undefined) {
@@ -229,11 +233,12 @@ function showProject(projectsList) {
           projectsList[j].proj_url !== "http://" &&
           projectsList[j].proj_url !== "TBD"
         ) {
+          
           var projectUrl = document.createElement("a");
           projectUrl.setAttribute("href", projectsList[j].proj_url);
           projectUrl.setAttribute("target", "_blank");
           projectUrl.innerHTML = projectsList[j].proj_url;
-          $("#projectUrl").html("<b>Project URL: </b>");
+          $("#projectUrl").html("<b>View Project: </b>");
           $("#projectUrl").append(projectUrl);
         } else {
           $("#projectUrl").html("");
@@ -247,7 +252,7 @@ function showProject(projectsList) {
           videoUrl.setAttribute("href", projectsList[j].video_url);
           videoUrl.setAttribute("target", "_blank");
           videoUrl.innerHTML = projectsList[j].video_url;
-          $("#videoUrl").html("<b>Video URL: </b>");
+          $("#videoUrl").html("<b>Video Documentation: </b>");
           $("#videoUrl").append(videoUrl);
         } else {
           $("#videoUrl").html("");
@@ -282,7 +287,7 @@ function showProject(projectsList) {
         }
 
         var pitch = replaceHtml(projectsList[j].elevator_pitch);
-        $("#pitch").html("<b>Elevator Pitch:</b>  <br />" + pitch);
+        $("#pitch").html(pitch);
 
         var des = replaceHtmlDes(projectsList[j].description);
         des = replaceHtml(des);
@@ -526,7 +531,6 @@ function showProjectCard(projectsList) {
         } else {
           $("#mainImage").html("");
         }
-
         var pitch = replaceHtml(projectsList[j].elevator_pitch);
         $("#pitch").html("<b>Elevator Pitch:</b>  <br />" + pitch);
 
@@ -546,9 +550,9 @@ function showCurrentProject(projectid) {
   console.log(project);
 
   if (project.keywords !== null && project.length > 0) {
-    var keywords = "<b>Keywords: </b>" + project.keywords;
-  } else {
     var keywords = "";
+  } else {
+    var keywords = "<b>Keywords: </b>" + project.keywords;
   }
 
   if (project.preferred_name == undefined) {
@@ -614,8 +618,19 @@ function showCurrentProject(projectid) {
 
 // On click add ProjectId as hash
 function addProjectUrl(projectid) {
-    console.log(window.location.hash)
-    var newUrl =  `project?projectId=${projectid}`;
-    window.location.hash=newUrl
-    console.log(window.location.hash)
+    // console.log(window.location.hash)
+    var newUrl =  `project.html?#project?projectId=${projectid}`;
+    window.location=newUrl
+    console.log(window.location)
 }
+
+// MOBILE MENU SCRIPT
+function hamburgerMenu() {
+  var x = document.getElementById("topLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+

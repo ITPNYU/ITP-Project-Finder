@@ -3,24 +3,20 @@
 /**************/
 
 body {
-	background: #f4f4f4;
-	color: #404d5f;/*#fff*/
-	font-family: 'Muli', sans-serif;
+  background: #f4f4f4;
+  color: #404d5f;/*#fff*/
+  font-family: 'Muli', sans-serif;
   /*min-height: 100%;*/
 }
 
 input{
-  margin-bottom: 1%;
-  padding: 15px;
-  padding-left: 0px;
-  width: 97%;
+  padding-left: 20px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(0,0,0,0.3);
   color: #404d5f;/*#fff;*/
-  border-bottom: 5px solid rgb(231, 231, 235);
-  font-size: 25px;
-  font-weight: 900;
+  border-bottom: 1px solid rgb(231, 231, 235);
+  font-size: 18px;
 }
 
 a, a:visited, a:hover{
@@ -54,33 +50,33 @@ h1 {
 }
 
 .centered{
-	text-align: center;
+  text-align: center;
 }
 
 .card-container {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .card {
   z-index: 5;
-	padding-top: 25px;
+  padding-top: 25px;
   background: no-repeat center;
   background-size: cover;
-/*  border-left: 1px solid #f5f5f5;
+  /*  border-left: 1px solid #f5f5f5;
   border-top: 1px solid #f4f4f4;
   border-right: 1px solid #fafafb;
   border-bottom: 1px solid #e8e8e8;*/
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-box-shadow: 0 2px 3px rgba(0,0,0,.05);
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.05);
-  box-shadow: 0 2px 3px rgba(0,0,0,.1);
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 260px;
-  cursor: pointer;
-  transition: .3s all ease;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+-moz-box-shadow: 0 2px 3px rgba(0,0,0,.05);
+-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.05);
+box-shadow: 0 2px 3px rgba(0,0,0,.1);
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+height: 260px;
+cursor: pointer;
+transition: .3s all ease;
 }
 
 .card:hover {
@@ -173,9 +169,7 @@ h1 {
 }
 
 #card-holder{
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0px;
 }
 
 #mainImage img {
@@ -187,6 +181,7 @@ h1 {
 #author {
   font-size: 20px;
 }
+
 
 #noResult {
   margin-top: 8px;
@@ -216,23 +211,23 @@ h1 {
 /***************************/
 
 ::-webkit-input-placeholder {
-   /* color: #a9a9a9;#fff;*/
-   color: #707070;
+  /* color: #a9a9a9;#fff;*/
+  color: #707070;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #707070;
-   color: #a9a9a9;/*#fff;*/ 
+  color: #707070;
+  color: #a9a9a9;/*#fff;*/ 
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #707070;
-   color: #a9a9a9;/*#fff;*/  
+  color: #707070;
+  color: #a9a9a9;/*#fff;*/  
 }
 
 :-ms-input-placeholder {  
-   /* color: #a9a9a9;#fff;*/
-   color: #707070;
+  /* color: #a9a9a9;#fff;*/
+  color: #707070;
 }
 
 input:focus,
@@ -244,7 +239,7 @@ button:focus {
 
 input:focus {
   outline: none !important;
-  border-bottom: 5px solid rgba(255, 94, 153, 0.65);
+  /* border-bottom: 5px solid rgba(255, 94, 153, 0.65); */
 }
 
 /* button */
@@ -274,7 +269,6 @@ input:focus {
 
 .button-royal, .button-royal-flat, .button-royal:focus, .button-royal-flat:focus {
   background-color: rgba(255,255,255,0.0);
-  border: 1px solid rgb(210, 210, 200);
   color: rgba(255, 94, 153, 0.65);/*#ff5e99;*/
 }
 
@@ -284,13 +278,13 @@ input:focus {
   color: white;
 }
 
-#searchBtn {
-  position: absolute;
-  top: 55%;
-  left: 91%;
-  border: none;
-  font-size: 22px;
-}
+/* #searchBtn { */
+/*   position: absolute; */
+/*   top: 55%; */
+/*   left: 91%; */
+/*   border: none; */
+/*   font-size: 22px; */
+/* } */
 
 .gray {
   font-weight: 700;
@@ -314,7 +308,6 @@ input:focus {
 }
 
 .footer {
-  position: fixed;
   margin: 0;
   bottom: 0;
   width: 100%;
@@ -356,7 +349,7 @@ input:focus {
 
 .global-nav__logo {
   float: left;
-  margin: 15px 0 0;
+  margin: 15px 5vw 0;
   width: 224px;
   height: 30px;
   background-image: url('https://itp.nyu.edu/ranch/projects/img/logo_nyu-tisch_white.svg');
@@ -438,6 +431,12 @@ input:focus {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
     justify-content: space-around;
   }
+
+  .mobile-filter-container {
+  
+  }
+  .filter-container {
+  }
 }
 
 /* Small screens */
@@ -449,10 +448,273 @@ input:focus {
 }
 
 .projectCard {
-    width: 100%;
-    padding: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .footer a {
   color: #D1004D;
+}
+
+nav {
+  background-color: #57068c;
+  min-height:50px;
+  height:60px;
+}
+
+.navbar{
+  border-radius:unset;
+  margin-bottom:unset;
+}
+
+@media all and (min-width: 769px) {
+  #mobileNav {
+    display: none; 
+  } 
+
+}
+
+@media all and (max-width: 769px) {
+  .navbar { 
+    display:none;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #57068c;
+  position: relative; 
+  min-height:60px
+
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #topLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block; 
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #57068c;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0; 
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  color: #ff5e99; 
+}
+
+/* Style the active link (or home/logo) */
+.ham-active {
+  color: Black; 
+}
+
+#topLinks{
+  margin-top:50px;
+  margin-left: 5vw;
+}
+
+.navbar.navbar-expand-lg.scrolling-navbar a {
+  color: white;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  text-decoration: none;
+  color: #ff5e99!important;
+  background-color: unset;
+}
+
+.navbar-right {
+  float: right !important;
+  margin-right: 5vw;
+}
+
+
+.filter-container {
+  display:flex;
+}
+
+.search {
+  margin-left:auto;
+  display: inline-flex;
+}
+
+#theInput::placeholder{
+  color:black;
+}
+
+quote {
+  font-size:24px;
+  display: block;
+  width: 75%;
+  padding-top:45px;
+}
+
+/* Collection Cards */
+
+.collection-card {
+  max-height:200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+
+
+/* Centered text */
+.centered-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.collection-title {
+  color:white;
+  font-size:24px;
+  text-align:center;
+}
+
+.top-buffer {
+  margin-top:20px;
+}
+
+a.collection-link:focus > div.collection-card {
+  border:solid;
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 5px;
+}
+
+a.collection-link:focus > div> span.overlay::before{
+  opacity:0.35;
+}
+
+.overlay {
+  position: relative;
+  display: inline-block;
+  background: cyan;
+  display: inline-block;
+}
+
+.overlay > img {
+  vertical-align: middle;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .35;
+  transition: .5s ease;
+}
+
+.overlay:hover::before {
+  opacity: 0;
+}
+
+#theInput:focus {
+  border:solid;
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 1px;
+}
+
+p {
+  line-height: 2;
+}
+
+#pitch {
+  margin-top: 25px;
+}
+
+#projectImage {
+  margin-top:25px;
+}
+#projectImage img{
+  width: 100%;
+}
+
+#description {
+  margin-top:25px;
+}
+
+.projectLink  {
+  background-color: unset;
+  border-radius: 0px;
+  border: solid 1px;
+  color: #57068C;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-top:25px;
+}
+
+select#technology{
+  margin-left:35px;
+}
+
+select {
+    border-radius: 0px;
+    width: 100%;
+    height: 35px;
+    border:none;
+    border-bottom: 1px solid rgb(231, 231, 235);
+    background-color:unset;
+}
+
+select:focus{
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 1px;
+}
+
+h2 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+quote {
+  font-family: 'Lato', sans-serif;
+}
+
+input:focus {
+  border:solid;
+  border-color: rgba(255, 94, 153, 0.65);
+  border-width: 1px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:900;
+}
+
+#project-title {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.col-md-3.custom-select {
+  padding:unset;
 }
