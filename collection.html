@@ -60,35 +60,33 @@
 
     <!-- Filters -->
     <div class="container">
-      <h1><a href="../projects">ITP Projects Finder</a></h1>
-      <label for="collection technology">Filter by:</label>
+      <h1 style="padding-bottom:25px;"><a href="../projects">ITP Projects Finder</a></h1>
       <div class="filter-container">
         <div class="custom-select col-md-3">
           <select aria-label="filter" id="collection" onchange="if (this.value) window.location.href=this.value; location.reload(1)" >
-            <option value="">Collection:</option>
-            <option value="collection.html#Physical Computing">Physical Computing</option>
-            <option value="collection.html#Mixed Reality">AR/VR/XR</option>
-            <option value="collection.html#Performance">Performance</option>
-            <option value="collection.html#Machine Learning">Machine Learning</option>
-            <option value="collection.html#Design">Design</option>
-            <option value="collection.html#Music">Sound/Music</option>
-            <option value="collection.html#Data">Data</option>
-            <option value="collection.html#Wearable">Wearable</option>
-            <option value="collection.html#Fabrication">Fabrication</option>
-            <option value="collection.html#Installation">Installation</option>
-          </select>
-        </div>
-        <div class="custom-select col-md-3">
-          <select id="technology" aria-label="filter" onchange="if (this.value) window.location.href=this.value; location.reload(1)"  >
-            <option value="">Technology:</option>
-            <option value="collection.html#Arduino">Arduino</option>
-            <option value="collection.html#Javascript">Javascript</option>
-            <option value="collection.html#Unity">Unity</option>
-            <option value="collection.html#Tensorflow">Tensorflow</option>
-            <option value="collection.html#Ableton">Ableton</option>
-            <option value="collection.html#Unreal">Unreal</option>
-            <option value="collection.html#Photoshop">Photoshop</option>
-            <option value="collection.html#Processing">Processing</option>
+            <option disabled="disabled" selected="selected">View projects by:</option>
+            <optgroup label="Collection:">
+              <option value="collection.html#Physical Computing">Physical Computing</option>
+              <option value="collection.html#Mixed Reality">AR/VR/XR</option>
+              <option value="collection.html#Performance">Performance</option>
+              <option value="collection.html#Machine Learning">Machine Learning</option>
+              <option value="collection.html#Design">Design</option>
+              <option value="collection.html#Music">Sound/Music</option>
+              <option value="collection.html#Data">Data</option>
+              <option value="collection.html#Wearable">Wearable</option>
+              <option value="collection.html#Fabrication">Fabrication</option>
+              <option value="collection.html#Installation">Installation</option>
+            </optgroup>
+            <optgroup label="Technology">
+              <option value="collection.html#Arduino">Arduino</option>
+              <option value="collection.html#Javascript">Javascript</option>
+              <option value="collection.html#Unity">Unity</option>
+              <option value="collection.html#Tensorflow">Tensorflow</option>
+              <option value="collection.html#Ableton">Ableton</option>
+              <option value="collection.html#Unreal">Unreal</option>
+              <option value="collection.html#Photoshop">Photoshop</option>
+              <option value="collection.html#Processing">Processing</option>
+            </optgroup>
           </select>
         </div>
         <div class="search col-md-3"><input aria-label="Search" id="theInput" placeholder="Search ITP Projects" >
@@ -131,7 +129,7 @@
 
     <footer class="footer">
       <div class="centered text-muted">
-        <p class="no-space">We welcome your feedback and contributions on <a href="https://github.com/yining1023/itp-project-finder" target="_blank">GitHub</a>.</p>
+        <p class="no-space">We welcome your feedback and contributions on <a href="https://github.com/ITPNYU/itp-project-finder" target="_blank">GitHub</a>.</p>
         <p class="no-space">Update or add your projects into the <a href="https://itp.nyu.edu/projects/" target="_blank">ITP projects database</a></p>
         <p class="no-space"><a href="https://www.nyu.edu/footer/accessibility.html" target="_blank">Accessibility</a></p>
       </div>
